@@ -39,5 +39,6 @@
     "express": "^4.17.1",
     "logger": "*",
     "morgan": "^1.10.0"
-  }
+  },
+  "packageManager": "yarn@1.22.18"
 }

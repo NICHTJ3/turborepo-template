@@ -24,5 +24,6 @@
     "tsconfig": "*",
     "typescript": "^4.5.2",
     "tsup": "^5.10.1"
-  }
+  },
+  "packageManager": "yarn@1.22.18"
 }

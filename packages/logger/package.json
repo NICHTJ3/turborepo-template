@@ -26,5 +26,6 @@
   },
   "jest": {
     "preset": "scripts/jest/node"
-  }
+  },
+  "packageManager": "yarn@1.22.18"
 }
