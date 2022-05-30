@@ -1,0 +1,5 @@
+#!/bin/bash
+
+rm -rf ./out
+yarn build --filter=$@
+yarn turbo prune --scope=$@ --docker
