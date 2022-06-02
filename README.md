@@ -73,6 +73,12 @@ cd my-turborepo
 yarn run dev
 ```
 
+To develop a specific packages
+```
+cd my-turborepo
+yarn run single-app:dev <app-name> #eg api
+```
+
 ### Remote Caching
 
 Turborepo can use a technique known as [Remote Caching (Beta)](https://turborepo.org/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.

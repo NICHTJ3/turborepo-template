@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Run a single app and all it's deps in development
+yarn turbo run dev --filter="$@"... --parallel
