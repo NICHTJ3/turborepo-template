@@ -6,15 +6,42 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 ### Apps and Packages
 
+#### Apps
+
 - `api`: an Express app
+  - This provides an example of consuming a shared lib in an environment where
+    module transpilation doesn't occur (leading changes to lag behind if
+    you're depending on another project building itself)
 - `docs`: a [Next.js](https://nextjs.org) app
 - `web`: another [Next.js](https://nextjs.org) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
+  - The two above provide examples of consuming libraries in environments
+    where transpile modules can occur
+
+#### Utility Packages
+
+These packages provide consistency throughout the rest of the packages. e.g
+jest, eslint, and tsconfig setups
+
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `eslint-config-server`: `eslint` configurations for our api
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
 - `scripts`: `scripts`s used throughout the monorepo (currently jest configs)
+- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+
+#### Shared librabries
+
+This was pretty much the whole reason I started this template. I wanted to
+figure out a way to create a fast and enjoyable local development experience
+that didn't make bundling to release an app without publishing shared libs
+difficult.
+
+- `ui`: a stub React component library shared by both `web` and `docs` applications
+  - When yarn dev is run this package is watched and recompiled on the fly,
+    next-transpile-modules picks up changes live.
 - `logger`: a shared library used by the api to log information to the console
+  - When yarn dev is run this package is watched by both it's own dev command
+    and the api's dev command through typescript project references. This
+    allows us to have the fastest and most consistant development experience
+    without preventing us from publishing this package in the future
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
