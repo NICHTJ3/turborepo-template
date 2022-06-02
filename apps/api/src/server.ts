@@ -16,7 +16,7 @@ export const createServer = () => {
       return res.json({ message: `hello ${req.params.name}` });
     })
     .get("/healthz", (req, res) => {
-      log('test');
+      log("test");
       return res.json({ ok: true });
     });
 
