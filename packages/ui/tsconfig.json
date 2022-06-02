@@ -1,6 +1,7 @@
 {
   "extends": "tsconfig/react-library.json",
   "compilerOptions": {
+    "rootDir": "./src",
     "lib": [
       "dom",
       "ES2015"
