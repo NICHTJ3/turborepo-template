@@ -10,6 +10,11 @@
   "exclude": [
     "node_modules"
   ],
+  "references": [
+    {
+      "path": "../../packages/logger"
+    }
+  ],
   "include": [
     "src"
   ]

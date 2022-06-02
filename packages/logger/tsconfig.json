@@ -1,16 +1,9 @@
 {
+  "extends": "tsconfig/node-library.json",
   "compilerOptions": {
-    "lib": [
-      "ES2015"
-    ],
-    "module": "CommonJS",
     "outDir": "./dist",
     "rootDir": "./src"
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "extends": "tsconfig/base.json",
   "include": [
     "src"
   ]
