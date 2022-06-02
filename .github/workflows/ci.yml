@@ -6,19 +6,17 @@ on:
   pull_request:
     types: [opened, synchronize]
 
-env:
-  # This stops our prepare script running after installing dependencies
-  CI: 1
-
 jobs:
   build:
     name: Build and Test
     timeout-minutes: 15
     runs-on: ${{ matrix.os }}
-    # To use Remote Caching, uncomment the next lines and follow the steps below.
-    # env:
-    #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-    #  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+    env:
+      # This stops our prepare script running after installing dependencies
+      CI: 1
+      # Remote Caching
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
     strategy:
       matrix:
         os: [ubuntu-latest]
