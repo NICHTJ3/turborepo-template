@@ -8,7 +8,7 @@ on:
 
 env:
   # This stops our prepare script running after installing dependencies
-  NODE_ENV: production
+  CI: 1
 
 jobs:
   build:
