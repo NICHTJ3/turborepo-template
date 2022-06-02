@@ -6,6 +6,7 @@
   "files": [
     "base.json",
     "nextjs.json",
+    "node-library.json",
     "react-library.json"
   ],
   "packageManager": "yarn@1.22.18"
