@@ -1,5 +1,9 @@
-import * as React from "react";
+import React, { ComponentProps } from "react";
 
-export const Button = () => {
-  return <button>Boop</button>;
+interface Props extends ComponentProps<"button"> {
+  children?: React.ReactNode;
+}
+
+export const Button = ({ children = "Boop", ...props }: Props) => {
+  return <button {...props}>{children}</button>;
 };
