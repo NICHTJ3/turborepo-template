@@ -1,0 +1,3 @@
+#!/bin/bash
+
+if [[ "$CI" == "0" || -z "$CI" ]];then yarn build fi

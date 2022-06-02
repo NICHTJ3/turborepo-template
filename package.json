@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "prepare": "yarn build",
+    "prepare": "./scripts/prepare",
     "release": "./scripts/release",
     "build": "yarn turbo run build",
     "dev": "yarn turbo run dev --parallel",
