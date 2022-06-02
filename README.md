@@ -10,12 +10,14 @@ This turborepo uses [Yarn](https://classic.yarnpkg.com/lang/en/) as a package ma
 
 - `api`: an Express app
   - This provides an example of consuming a shared lib in an environment where
-    module transpilation doesn't occur (leading changes to lag behind if
-    you're depending on another project building itself)
+    module transpilation doesn't occur which would lead to changes lagging behind if
+    you're where depending on another project building itself. Instead we
+    manually reference the shared libs in the tsconfig so they can be built
+    before we build
 - `docs`: a [Next.js](https://nextjs.org) app
 - `web`: another [Next.js](https://nextjs.org) app
   - The two above provide examples of consuming libraries in environments
-    where transpile modules can occur
+    where module transpilation can occur
 
 #### Utility Packages
 
