@@ -24,7 +24,7 @@ jest, eslint, and tsconfig setups
 
 - `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `eslint-config-server`: `eslint` configurations for our api
-- `scripts`: `scripts`s used throughout the monorepo (currently jest configs)
+- `scripts`: scripts used throughout the monorepo (currently jest configs)
 - `tsconfig`: `tsconfig.json`s used throughout the monorepo
 
 #### Shared librabries
