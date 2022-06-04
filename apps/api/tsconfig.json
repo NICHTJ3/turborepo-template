@@ -5,17 +5,13 @@
       "ES2015"
     ],
     "module": "CommonJS",
+    "rootDir": "./src",
     "outDir": "./dist"
   },
   "exclude": [
-    "node_modules"
-  ],
-  "references": [
-    {
-      "path": "../../packages/logger"
-    }
+    "**/node_modules"
   ],
   "include": [
-    "src"
+    "src/**/*"
   ]
 }
