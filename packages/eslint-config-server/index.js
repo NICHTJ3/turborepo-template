@@ -1,12 +1,8 @@
 module.exports = {
-  extends: ["eslint:recommended"],
+  extends: ["base"],
   env: {
     node: true,
     es6: true,
-  },
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
   },
   overrides: [
     {

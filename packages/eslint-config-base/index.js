@@ -1,7 +1,29 @@
 module.exports = {
-  extends: ["next", "plugin:prettier/recommended"],
+  extends: ["eslint:recommended", "plugin:prettier/recommended"],
+  parserOptions: {
+    ecmaVersion: "latest",
+    sourceType: "module",
+  },
+  env: { node: true },
+  overrides: [
+    {
+      files: ["**/*.ts?(x)"],
+      plugins: ["@typescript-eslint"],
+      parser: "@typescript-eslint/parser",
+      parserOptions: {
+        sourceType: "module",
+        ecmaFeatures: {
+          jsx: true,
+        },
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+      extends: [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+      ],
+    },
+  ],
   rules: {
-    "@next/next/no-html-link-for-pages": "off",
     "react/jsx-key": "off",
   },
 };
