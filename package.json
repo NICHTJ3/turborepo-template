@@ -7,14 +7,15 @@
     "packages/*"
   ],
   "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev --parallel",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
     "prepare": "./scripts/prepare",
     "release": "./scripts/release",
-    "build": "yarn turbo run build",
     "single-app:dev": "./scripts/single-dev",
-    "dev": "yarn turbo run dev --parallel",
-    "test": "yarn turbo run test --parallel",
-    "lint": "yarn turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "test": "turbo run test --parallel"
   },
   "devDependencies": {
     "prettier": "latest",

@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest",
     "build": "tsup src/index.tsx --dts --external react",
-    "dev": "yarn build -- --watch",
+    "dev": "yarn build --watch",
     "lint": "TIMING=1 eslint src/**/*.ts* --fix",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
